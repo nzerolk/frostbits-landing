@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-900 py-24 sm:py-32">
+  <div class="bg-gray-900 py-24 sm:py-32" id="work-with-us">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base font-semibold leading-7 text-indigo-400">Deploy faster</h2>
+        <h2 class="text-base font-semibold leading-7 text-indigo-400">Build engagement</h2>
         <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Work with us</p>
         <p class="mt-6 text-lg leading-8 text-gray-300">Our skilled professionals are eager to solve your complex user engagement challenges. We specialize in custom cutting edge software that leverage decentralized networks to facilitate rapid, secure, and cost-effective exchange of digital goods, providing clients access to new digital ecosystems and gain a competitive advantage by keeping their community engaged.</p>
       </div>
@@ -15,7 +15,7 @@
             </dt>
             <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
               <p class="flex-auto">{{ feature.description }}</p>
-              <p class="mt-6">
+              <p class="mt-6" v-if="feature.href">
                 <a :href="feature.href" class="text-sm font-semibold leading-6 text-indigo-400">Learn more <span aria-hidden="true">→</span></a>
               </p>
             </dd>
@@ -27,29 +27,26 @@
 </template>
 
 <script setup>
-import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/vue/20/solid'
+import { GiftIcon, UserGroupIcon, CurrencyDollarIcon } from '@heroicons/vue/20/solid'
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'Fidelity rewards',
     description:
-        'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.',
-    href: '#',
-    icon: CloudArrowUpIcon,
+        'Reward your most your most loyal customers with a custom loyalty program that incentivizes them to keep coming back.',
+    icon: GiftIcon,
   },
   {
-    name: 'SSL certificates',
+    name: 'Membership management',
     description:
-        'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
-    href: '#',
-    icon: LockClosedIcon,
+        'Manage your community with ease. Leverage a custom platform to create and manage your own membership program.',
+    icon: UserGroupIcon,
   },
   {
-    name: 'Simple queues',
+    name: 'Monetization platforms',
     description:
-        'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.',
-    href: '#',
-    icon: ArrowPathIcon,
+        'Monetize your content with a custom platform that allows you to sell digital goods and services to your community.',
+    icon: CurrencyDollarIcon,
   },
 ]
 </script>
