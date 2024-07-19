@@ -26,13 +26,13 @@
 const people = [
   {
     name: 'Wilder Stubbs',
-    role: 'CEO & Co-Founder',
+    role: 'Co-Founder & CEO',
     imageUrl: '/Wilder.png',
     link: 'https://x.com/WilderStubbs'
   },
   {
     name: 'Corentin Thomasset',
-    role: 'Solution Architect & Co-Founder',
+    role: 'Co-Founder & Solution Architect',
     imageUrl: '/Corentin.png',
     link: 'https://github.com/nzerolk'
   },
