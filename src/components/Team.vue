@@ -8,13 +8,15 @@
       </div>
       <ul role="list" class="mx-auto my-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-2 md:grid-cols-4 lg:mx-0 lg:max-w-none">
         <li v-for="person in people" :key="person.name">
-          <img class="mx-auto h-24 w-24 rounded-full" :src="person.imageUrl" alt="" />
-          <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{{ person.name }}</h3>
+          <a :href="person.link" target="_blank">
+            <img class="mx-auto h-24 w-24 rounded-full" :src="person.imageUrl" alt="" />
+            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{{ person.name }}</h3>
+          </a>
           <p class="text-sm leading-6 text-indigo-400">{{ person.role }}</p>
         </li>
       </ul>
       <div class="mx-auto max-w-2xl lg:text-center">
-        <p class="mt-6 text-lg leading-8 text-gray-300">Transform your passion into profit ! Join our global network of industry experts and turn your free time into earning opportunities. Through our bounty-based system we engage with top-tier consultants to build solutions that are both cost-effective and of the highest caliber. </p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">Transform your passion into profit! Join our global network of industry experts and turn your free time into earning opportunities. Through our bounty-based system, we engage with top-tier consultants to build solutions that are both cost-effective and of the highest caliber.</p>
       </div>
     </div>
   </div>
@@ -26,22 +28,13 @@ const people = [
     name: 'Wilder Stubbs',
     role: 'CEO & Co-Founder',
     imageUrl: '/Wilder.png',
+    link: 'https://x.com/WilderStubbs'
   },
   {
     name: 'Corentin Thomasset',
     role: 'Solution Architect & Co-Founder',
     imageUrl: '/Corentin.png',
+    link: 'https://github.com/nzerolk'
   },
-  {
-    name: 'Audran Thomas',
-    role: 'Backend specialist',
-    imageUrl: '/Audran.png',
-  },
-  {
-    name: 'Mathias Dail',
-    role: 'Blockchain expert',
-    imageUrl: '/Mathias.png',
-  },
-
 ]
 </script>
